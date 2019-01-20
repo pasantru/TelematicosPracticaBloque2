@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <head>
+        <title>Blog telematiquillos - create Entry
+        </title>
+        <html xmlns="http://www.w3.org/1999/xhtml"></html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <ul class="tabmenu ">
+            <li class="selected"><a href="./index.html" class="choice">Inicio</a></li>
+            <li><a href="./blogs.html" class="choice">Blogs</a></li>
+            <li><a href="./profile.html" class="choice">Perfil</a></li>
+        </ul>
+        
+        <div class="side" align="center">
+            <fieldset style="display: inline-block" align="left">
+                <div class="spacer">
+                    <form method="post" action="CreateEntry" id="login_login-main" class="login-form login-form-side">
+                        <input type="hidden" name="op" value="login-main">
+                        Title:<br>
+                        <input name="blog-title" placeholder="Title" type="text" maxlength="100" tabindex="1"><br>
+                        Content:<br>
+                        <textarea name="blog-content" rows="10" cols="100" maxlength="500">Contents...</textarea>
+
+                        <div class="submit">
+                            <br>
+                            <button class="btn" type="submit" tabindex="1">Create Entry</button>
+                        </div>
+
+                    </form>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

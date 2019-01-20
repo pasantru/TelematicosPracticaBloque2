@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Blog telematiquillos - login</title>
+        <html xmlns="http://www.w3.org/1999/xhtml"></html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <ul class="tabmenu ">
+            <li class="selected"><a href="./index.html" class="choice">Inicio</a></li>
+            <li><a href="/BlogServerlet" class="choice">Blogs</a></li>
+            <li><a href="./perfil.html" class="choice">Perfil</a></li>
+        </ul>
+            
+        <div class="side" align="center">
+            <fieldset style="display: inline-block">
+                <div class="spacer">
+                    <form method="post" action="ServerletLogin" id="login_login-main" class="login-form login-form-side">
+                        <input type="hidden" name="op" value="login-main">
+                        <input name="user" placeholder="username" type="text" maxlength="20" tabindex="1"><br>
+                        <input name="passwd" placeholder="password" type="password" tabindex="1"><br>
+                        <div class="submit">
+                            <br>
+                            <input type="submit" value="login"/>  
+                            <!--<button class="btn" type="submit" tabindex="1">login</button>-->
+                            <a href="./signup.html" class="registrarse">Registrarse?</a>
+                        </div>   
+                        <div class="clear"></div>
+                    </form>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>
+    
