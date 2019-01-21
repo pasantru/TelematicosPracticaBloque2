@@ -54,7 +54,6 @@ public class BlogServerlet extends HttpServlet {
             ResultSet rs = stmt.executeQuery(query);
             
             while (rs.next()) {
-                int index = rs.getInt("INDEX");
                 String title = rs.getString("TITLE");
                 String content = rs.getString("CONTENT");
                 String username = rs.getString("USERNAME");

@@ -60,15 +60,11 @@ public class LoginDB {
         try{ 
             Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();  
             Connection con = DriverManager.getConnection(dbURL);
-            PreparedStatement ps = con.prepareStatement("INSERT INTO TELEMATICOS.BLOG VALUES (?, ?, ?, ?, ?)"); 
-            Statement stmt3 = con.createStatement();
-            ResultSet rs3 = stmt3.executeQuery("SELECT COUNT(*) FROM TELEMATICOS.BLOG");
-            int j = rs3.getInt(1);
-            ps.setInt(1, j+1); 
-            ps.setString(2, title);
-            ps.setString(3, content);
-            ps.setString(4, username);
-            ps.setDate(5, new java.sql.Date(System.currentTimeMillis()));
+            PreparedStatement ps = con.prepareStatement("INSERT INTO TELEMATICOS.BLOG VALUES (?, ?, ?, ?)");
+            ps.setString(1, title);
+            ps.setString(2, content);
+            ps.setString(3, username);
+            ps.setDate(4, new java.sql.Date(System.currentTimeMillis()));
             int i=ps.executeUpdate();  
             if(i>0)  status = true;
         }catch(Exception e){System.out.println(e);}  
